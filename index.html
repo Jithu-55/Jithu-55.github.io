@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <!-- FontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="head-left">
+          <img src="img/zoro.gif" alt="logo" />
+          <h1>Jithu Baiju</h1>
+        </div>
+        <div class="head-right">
+          <p><a href="#">ABOUT</a></p>
+          <p><a href="#">PROJECTS</a></p>
+          <p><a href="#">SKILLS</a></p>
+          <p><a href="#">CONATCT</a></p>
+          <button id="music-toggle">
+            <i id="music-icon" class="fas fa-play-circle"></i>
+          </button>
+          <div class="hover-bg"></div>
+        </div>
+      </header>
+      <audio id="background-music" loop>
+        <source
+          src="img/IDLC-KUTE -BLESSED MANE_NIGHT RIDE.[AMV] - 320.mp3"
+          type="audio/mp3"
+        />
+      </audio>
+      <section class="hero-section autoBlur">
+        <div class="hero-img">
+          <video loop autoplay muted play-inline class="hero-video">
+            <source src="video/hero-1.mp4" />
+          </video>
+          <img src="img/image1.jpg" class="hero-image" style="display: none" />
+          <div class="hero-info">
+            <h1>JITHU BAIJU</h1>
+            <p>Web Developer<br />Game Developer<br />Application Developer</p>
+            <button>CONTACT</button>
+          </div>
+          <h1 class="last-text">PORTFOLIO</h1>
+          <div class="nxt-btn">NEXT</div>
+        </div>
+      </section>
+      <section class="about-section">
+        <p>Bringing ideas to life through code and creativity.</p>
+        <div class="autoBlur">
+          <h1>CODE. CREATE. INNOVATE. WELCOME TO MY WORLD!</h1>
+        </div>
+        <img src="img/stones.png" alt="stone image" class="stones-img" />
+        <div class="image-box autoTakeFull">
+          <img src="img/about.webp" alt="about-img" />
+        </div>
+        <h4>Web | Game | App Developer | Innovator</h4>
+        <h5>
+          I'm JithuBaiju, a passionate Game Developer and Web Developer. I
+          specialize in building exciting projects using Unity and Godot for
+          game development, and I’m proficient in web development technologies
+          like HTML, CSS, JavaScript, React Js, Node Js, and Mongo DB.
+          Additionally, I have experience in mobile app development using
+          Flutter and Dart.
+        </h5>
+      </section>
+      <section class="skill-section">
+        <h3>Into My Skills</h3>
+        <p>
+          A blend of creativity and technical expertise to build engaging
+          digital experiences.
+        </p>
+        <div class="info-cards">
+          <div class="card autoDisplay">
+            <h1>WEB DEVELOPMENT</h1>
+            <p>
+              Turning ideas into fully functional and visually appealing
+              websites.
+            </p>
+            <video
+              src="video/blackhole.mp4"
+              loop
+              autoplay
+              muted
+              play-inline
+            ></video>
+            <div class="skill-icons">
+              <div class="skill">
+                <i class="devicon-html5-plain"></i><span>HTML5</span>
+              </div>
+              <div class="skill">
+                <i class="devicon-css3-plain"></i><span>CSS3</span>
+              </div>
+              <div class="skill">
+                <i class="devicon-javascript-plain"></i><span>JavaScript</span>
+              </div>
+              <div class="skill">
+                <i class="devicon-react-original"></i><span>React</span>
+              </div>
+
+              <div class="skill">
+                <i class="devicon-mongodb-plain"></i><span>Mongo DB</span>
+              </div>
+            </div>
+          </div>
+          <div class="card autoDisplay">
+            <h1>APPLICATION DEVELOPMENT</h1>
+            <p>
+              Designing and developing powerful applications for mobile and
+              desktop.
+            </p>
+            <video
+              src="video/feature-3.mp4"
+              loop
+              autoplay
+              muted
+              play-inline
+            ></video>
+            <div class="skill-icons">
+              <div class="skill">
+                <i class="devicon-flutter-plain"></i><span>Flutter</span>
+              </div>
+              <div class="skill">
+                <i class="devicon-dart-plain"></i><span>Dart</span>
+              </div>
+            </div>
+          </div>
+          <div class="card autoDisplay">
+            <h1>GAME DEVELOPMENT</h1>
+            <p>
+              Developing interactive and visually stunning games that captivate
+              players.
+            </p>
+            <video
+              src="video/feature-5.mp4"
+              loop
+              autoplay
+              muted
+              play-inline
+            ></video>
+            <div class="skill-icons">
+              <div class="skill">
+                <i class="fab fa-unity"></i><span>Unity</span>
+              </div>
+              <div class="skill">
+                <i class="devicon-csharp-plain"></i><span>C#</span>
+              </div>
+              <div class="skill">
+                <i class="devicon-godot-plain"></i><span>Godot</span>
+              </div>
+              <div class="skill">
+                <i class="devicon-blender-original"></i><span>Blender</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact-section">
+        <p>Feel free to reach out for collaborations or just to say hi!</p>
+
+        <div class="autoBlur">
+          <h1>Get in Touch with Me</h1>
+        </div>
+        <button id="contact-btn">CONTACT ME</button>
+        <img class="img1" src="img/swordman.webp" alt="swordsman" />
+        <img class="img2" src="img/contact-1.webp" alt="contact" />
+        <img class="img3" src="img/contact-2.webp" alt="contactimage2 " />
+      </section>
+      <section id="contact-form-section">
+        <form id="contact-form" onsubmit="sendMail(event)">
+          <h2>Contact Me</h2>
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+          <button type="button" id="back-btn">Back</button>
+        </form>
+      </section>
+      <section class="footer">
+        <p>
+          &copy; 2024 Jithu Baiju | Open for collaboration. Let’s build
+          something great together!
+        </p>
+        <ul class="social-icons">
+          <li>
+            <a href="https://github.com/jithubaiju55" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/jithu-baiju-5a6481271"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/jithu_2440" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+        <p>Privacy Policy</p>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
