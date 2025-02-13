@@ -126,6 +126,9 @@ document.addEventListener("DOMContentLoaded", function () {
       hoverBg.style.opacity = "1"; // Show oval
     });
   });
+document.addEventListener("click", () => {
+  hoverSound.play();
+}, { once: true });
 
   // Hide the hover background when mouse leaves navbar
   document.querySelector(".head-right").addEventListener("mouseleave", function () {
