@@ -1,3 +1,52 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const splashScreen = document.getElementById("splash-screen");
+  const splashLogo = document.getElementById("splash-logo");
+  const splashName = document.getElementById("splash-name");
+  const navbarLogo = document.getElementById("navbar-logo");
+
+  function startAnimation() {
+    // Get positions of splash logo & navbar logo
+    const navRect = navbarLogo.getBoundingClientRect();
+    const splashRect = splashLogo.getBoundingClientRect();
+
+    // Adjust movement (Move left & slightly up)
+    let translateX = navRect.left - splashRect.left - 15; // Move 15px left
+    let translateY = navRect.top - splashRect.top - 5; // Move 5px up
+
+    // Calculate scale factor to shrink to 50px × 50px
+    const scaleFactor = 50 / splashLogo.offsetWidth;
+
+    // Move and scale logo smoothly
+    splashLogo.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scaleFactor})`;
+    splashLogo.style.transition = "transform 1.5s ease-in-out";
+
+    // Enlarge text & apply gradient
+    setTimeout(() => {
+      splashName.classList.add("enlarge-text");
+    }, 500);
+
+    // Fade out text as logo reaches navbar
+    setTimeout(() => {
+      splashName.classList.add("fade-out");
+    }, 1200);
+
+    // Ensure logo stops at correct size & position
+    setTimeout(() => {
+      navbarLogo.src = splashLogo.src; // Set navbar logo
+      splashLogo.style.transition = "none"; // Stop further movement
+      splashLogo.style.opacity = "0"; // Hide splash logo smoothly
+      splashScreen.classList.add("hide-splash"); // Hide splash screen instantly
+    }, 1500);
+  }
+
+  // Click to start animation
+  splashLogo.addEventListener("click", startAnimation);
+
+  // Auto-run after 3 seconds
+  setTimeout(startAnimation, 3000);
+});
+
+
 const nextButton = document.querySelector(".nxt-btn");
 const video = document.querySelector(".hero-video");
 const image = document.querySelector(".hero-image");
