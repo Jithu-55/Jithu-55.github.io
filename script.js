@@ -154,7 +154,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const hoverBg = document.querySelector(".hover-bg");
 
   // Preload sound
-  const hoverSound = new Audio("img/pop.wav");
+  const hoverSound = new Audio("img/Pop.wav");
+
 
   menuItems.forEach((item) => {
     item.addEventListener("mouseenter", function () {
@@ -174,6 +175,9 @@ document.addEventListener("DOMContentLoaded", function () {
       hoverBg.style.opacity = "1"; // Show oval
     });
   });
+document.addEventListener("click", () => {
+  hoverSound.play();
+}, { once: true });
 
   // Hide the hover background when mouse leaves navbar
   document.querySelector(".head-right").addEventListener("mouseleave", function () {
