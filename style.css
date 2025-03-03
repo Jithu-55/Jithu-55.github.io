@@ -705,7 +705,143 @@ header {
 #music-toggle:hover {
   color: #00ffff;
 }
+.project-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  align-items: center;
+  position: relative;
+  width: 80%;
+  height: 100vh;
+  margin-top: 200px;
+  margin-bottom: 700px;
+}
+.project-card {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  align-items: center;
+  gap: 10%;
+  justify-content: center;
+}
+.project-vidbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  position: relative;
+  cursor: pointer;
+  min-width: 400px;
+  transition: 0.5s;
+  mix-blend-mode: exclusion;
+}
+.project-vidbox video {
+  object-fit: cover;
+  width: 100%;
+  box-shadow: 0 0 10px lightgray;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.project-vidbox video:hover {
+  box-shadow: 0 0 20px lightgray;
+}
+.project-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 50%;
+  padding-left: 10%;
+}
+.project-info h1 {
+  width: 90%;
+  font-size: 25px;
+  font-weight: bold;
+  text-wrap: nowrap;
+  margin-bottom: 10px;
+  margin-top: 0;
+  max-width: 450px;
+}
+.project-info p {
+  width: 90%;
+  max-width: 400px;
+  min-width: 300px;
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+.project-buttons {
+  display: flex;
+  gap: 15px;
+}
 
+.project-buttons button {
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #727fdeb4;
+  background-color: #2200493d;
+  box-shadow: 0 0 5px #727fde86;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-buttons button:hover {
+  box-shadow: 0 0 15px #727fde86;
+  opacity: 0.7;
+}
+.gradient {
+  background: linear-gradient(to right, #008baa, #7e42a7, #6600c5, #6070fd);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s linear infinite;
+}
+@keyframes animate-gradient {
+  to {
+    background-position: 200%;
+  }
+}
+
+.hover-sign {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 100px;
+}
+.hover-sign::before,
+.hover-sign::after {
+  content: "";
+  position: absolute;
+  width: 50px; /* Adjust the size as needed */
+  height: 50px; /* Adjust the size as needed */
+  background: url("img/point.svg") no-repeat center;
+  background-size: contain;
+  top: 20%;
+  left: 40%;
+  border-radius: 50%;
+  animation: hoverAnimation 3s ease-in-out infinite;
+}
+
+@keyframes hoverAnimation {
+  0% {
+    box-shadow: 0 0 5px lightgray;
+    transform: translate(100%, 50%) rotate(30deg);
+  }
+  100% {
+    box-shadow: 0 0 15px lightgray;
+    transform: translate(80%, 50%) rotate(0deg);
+  }
+}
+
+.hover-sign.active {
+  display: none;
+}
 @media screen and (max-width: 650px) {
   header {
     padding: 0 10px;

@@ -45,7 +45,23 @@ document.addEventListener("DOMContentLoaded", function () {
   // Auto-run after 3 seconds
   setTimeout(startAnimation, 3000);
 });
+const video1 = document.getElementById("projectvideo1");
+const video2 = document.getElementById("projectvideo2");
+const video3 = document.getElementById("projectvideo3");
+const hoverSign = document.querySelector(".hover-sign");
+const stackOverlay = box.querySelector(".stack-overlay");
+const videoList = [video1, video2, video3];
 
+videoList.forEach(function (video) {
+  video.addEventListener("mouseover", function () {
+    video.play();
+    hoverSign.classList.add("active");
+  });
+  video.addEventListener("mouseout", function () {
+    video.pause();
+    hoverSign.classList.remove("active");
+  });
+});
 
 const nextButton = document.querySelector(".nxt-btn");
 const video = document.querySelector(".hero-video");
@@ -130,7 +146,6 @@ musicToggle.addEventListener("click", () => {
   }
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
   const menuItems = document.querySelectorAll(".head-right p");
   const hoverBg = document.querySelector(".hover-bg");
@@ -144,9 +159,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  document.querySelector(".head-right").addEventListener("mouseleave", function () {
-    hoverBg.style.opacity = "0";
-  });
+  document
+    .querySelector(".head-right")
+    .addEventListener("mouseleave", function () {
+      hoverBg.style.opacity = "0";
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -155,8 +172,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Preload sound
   const hoverSound = new Audio("img/Pop.wav");
-
-
   menuItems.forEach((item) => {
     item.addEventListener("mouseenter", function () {
       // Play hover sound
@@ -165,24 +180,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Get position of hovered item
       const rect = item.getBoundingClientRect();
-      const parentRect = document.querySelector(".head-right").getBoundingClientRect();
+      const parentRect = document
+        .querySelector(".head-right")
+        .getBoundingClientRect();
 
       // Set oval background width and position
       hoverBg.style.width = `${rect.width + 5}px`; // Adjust width to center better
       hoverBg.style.height = `${rect.height + 8}px`; // Adjust height for better fit
       hoverBg.style.left = `${item.offsetLeft - 5}px`; // Center horizontally
-      hoverBg.style.top = `${item.offsetTop+10}px`; // Center vertically
+      hoverBg.style.top = `${item.offsetTop + 10}px`; // Center vertically
       hoverBg.style.opacity = "1"; // Show oval
     });
   });
-document.addEventListener("click", () => {
-  hoverSound.play();
-}, { once: true });
+  document.addEventListener(
+    "click",
+    () => {
+      hoverSound.play();
+    },
+    { once: true }
+  );
 
   // Hide the hover background when mouse leaves navbar
-  document.querySelector(".head-right").addEventListener("mouseleave", function () {
-    hoverBg.style.opacity = "0";
-  });
+  document
+    .querySelector(".head-right")
+    .addEventListener("mouseleave", function () {
+      hoverBg.style.opacity = "0";
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -237,3 +260,20 @@ function sendMail(event) {
 }
 // Dynamically set the current year in the footer
 document.getElementById("current-year").textContent = new Date().getFullYear();
+
+document.querySelectorAll("a.nav-link").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const sectionID = link.getAttribute("href");
+    document.querySelector(sectionID).scrollIntoView({ behavior: "smooth" });
+  });
+});
+// Smooth Scroll for Navigation
+// Smooth Scroll for Navigation
+document.querySelectorAll("a.nav-link").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const sectionID = link.getAttribute("href");
+    document.querySelector(sectionID).scrollIntoView({ behavior: "smooth" });
+  });
+});

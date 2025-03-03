@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -31,10 +32,22 @@
           <h1>Jithu Baiju</h1>
         </div>
         <div class="head-right">
-          <p><a href="#">ABOUT</a></p>
-          <p><a href="#">PROJECTS</a></p>
-          <p><a href="#">SKILLS</a></p>
-          <p><a href="#">CONATCT</a></p>
+          <p>
+            <a href="#hero-section" class="nav-link">HOME</a>
+          </p>
+          <p>
+            <a href="#about-section" class="nav-link">ABOUT</a>
+          </p>
+          <p>
+            <a href="#skill-section" class="nav-link">SKILLS</a>
+          </p>
+          <p>
+            <a href="#projects-section" class="nav-link">PROJECTS</a>
+          </p>
+          <p>
+            <a href="#contact-section" class="nav-link">CONTACT</a>
+          </p>
+
           <button id="music-toggle">
             <i id="music-icon" class="fas fa-play-circle"></i>
           </button>
@@ -47,7 +60,7 @@
           type="audio/mp3"
         />
       </audio>
-      <section class="hero-section autoBlur">
+      <section class="hero-section autoBlur" id="hero-section">
         <div class="hero-img">
           <video loop autoplay muted play-inline class="hero-video">
             <source src="video/hero-1.mp4" />
@@ -62,7 +75,7 @@
           <div class="nxt-btn">NEXT</div>
         </div>
       </section>
-      <section class="about-section">
+      <section class="about-section" id="about-section">
         <p>Bringing ideas to life through code and creativity.</p>
         <div class="autoBlur">
           <h1>CODE. CREATE. INNOVATE. WELCOME TO MY WORLD!</h1>
@@ -81,7 +94,7 @@
           Flutter and Dart.
         </h5>
       </section>
-      <section class="skill-section">
+      <section class="skill-section" id="skill-section">
         <h3>Into My Skills</h3>
         <p>
           A blend of creativity and technical expertise to build engaging
@@ -172,7 +185,70 @@
           </div>
         </div>
       </section>
-      <section class="contact-section">
+      <section class="project-section">
+        <h1 class="project-title">MY PROJECTS 👨‍💻</h1>
+        <div class="project-card">
+          <div class="project-vidbox">
+            <video id="projectvideo1" src="video/project1.mp4"></video>
+            <div class="hover-sign"></div>
+          </div>
+          <div class="project-info">
+            <h1>MY <span class="gradient">FIRST</span> PROJECT</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
+              quis itaque laboriosam repellendus tempore necessitatibus? Quia
+              aliquam, neque ratione sint consequatur mollitia perferendis aut
+            </p>
+            <div class="project-buttons">
+              <button><i class="fa-solid fa-link"></i> Website</button>
+              <button><i class="fa-brands fa-github"></i> Source Code</button>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-vidbox">
+            <video id="projectvideo2" src="video/calculator.mp4"></video>
+          </div>
+          <div class="project-info">
+            <h1>MODERN <span class="gradient">CALCULATOR</span></h1>
+            <p>A modern claculator built using HTML,CSS,JavaScript</p>
+            <div class="project-buttons">
+              <button
+                onclick="window.location.href='https://calcwebsite.github.io/'"
+              >
+                <i class="fa-solid fa-link"></i> Website
+              </button>
+              <button
+                onclick="window.location.href='https://github.com/jithubaiju55/Calculator.git'"
+              >
+                <i class="fa-brands fa-github"></i> Source Code
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-vidbox">
+            <video id="projectvideo3" src="video/code editor.mp4"></video>
+          </div>
+          <div class="project-info">
+            <h1>CODE <span class="gradient">EDITOR</span></h1>
+            <p>A code editor built using just HTML,CSS,JavaScript</p>
+            <div class="project-buttons">
+              <button
+                onclick="window.location.href='https://codeeditor653.github.io/'"
+              >
+                <i class="fa-solid fa-link"></i> Website
+              </button>
+              <button
+                onclick="window.location.href='https://github.com/jithubaiju55/Code_Editor.git'"
+              >
+                <i class="fa-brands fa-github"></i> Source Code
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact-section" id="contact-section">
         <p>Feel free to reach out for collaborations or just to say hi!</p>
 
         <div class="autoBlur">
@@ -183,6 +259,7 @@
         <img class="img2" src="img/contact-1.webp" alt="contact" />
         <img class="img3" src="img/contact-2.webp" alt="contactimage2 " />
       </section>
+
       <section id="contact-form-section">
         <form id="contact-form" onsubmit="sendMail(event)">
           <h2>Contact Me</h2>
